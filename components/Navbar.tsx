@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -42,16 +43,25 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-1 group">
-            <span className="font-poppins font-bold text-2xl text-white-pure tracking-wide">
-              ORZJC
-            </span>
-            <span
-              className="font-poppins font-bold text-2xl tracking-widest2 ml-1"
-              style={{ color: "var(--brown-light)" }}
-            >
-              PRIME
-            </span>
+          <Link href="/" className="flex items-center gap-3 group">
+            <Image
+              src="/orzjc-logo.svg"
+              alt="ORZJC Prime"
+              width={40}
+              height={40}
+              className="rounded-full"
+            />
+            <div className="flex items-baseline gap-1">
+              <span className="font-poppins font-bold text-2xl text-white-pure tracking-wide">
+                ORZJC
+              </span>
+              <span
+                className="font-poppins font-bold text-2xl tracking-widest2 ml-1"
+                style={{ color: "var(--brown-light)" }}
+              >
+                PRIME
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Nav Links */}
